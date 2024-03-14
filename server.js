@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 //routes
 const indexRouter = require("./routes/index");
 const authorRouter = require("./routes/authors");
+const bookRouter = require("./routes/books");
 
 //mongoose connection
 const mongoose = require("mongoose");
@@ -28,6 +29,7 @@ db.once("open", () => console.log("Connected to Mongoose"));
 //middleware
 app.use("/", indexRouter);
 app.use("/authors", authorRouter);
+app.use("/books", bookRouter);
 
 //start a server and have it listen for incoming connection
 app.listen(process.env.PORT || 3000, () => {

@@ -1,0 +1,5 @@
+library for adding files
+npm i multer
+
+main form needs enctype
+<form action="/books" method="POST" enctype="multipart/form-data">
