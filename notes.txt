@@ -3,3 +3,8 @@ npm i multer
 
 main form needs enctype
 <form action="/books" method="POST" enctype="multipart/form-data">
+
+
+library for uploading files to db
+npm i filepond --save
+plugins: resize, preview, encode
